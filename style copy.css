@@ -10,10 +10,11 @@ html, body {
     font-size: 50px;            
     text-align: center;
     background-color: lightyellow;
-    height: 100%;               /*if you want to put the height ___% you have to put html, body to 100%*/
-    align-items: flex-end;
-    flex-direction: column;
-    justify-content: flex-end;
+    /*height: 50%;               /*if you want to put the height ___% you have to put html, body to 100%*/
+    alignitems: flex-end;
+    flexdirection: column;
+    justifycontent: flex-end;
+    flex-wrap: wrap;        /*give the fixed width to the children div*/
  
 }
 
@@ -36,3 +37,11 @@ html, body {
     fl3x: 1;                            /*<<<*/
     alignself: flex-start;
 }        
+
+.container > div {
+    width: 300px; /*max is 300px and can adjust to the down size 
+    but when it is bigger than 300px, they will not fill the rest space*/
+    /*if you add wrap property in the container the items' width will not down size the 
+    original width that is given instead it will wrap*/
+    /*go and check the flex-wrap property in .container*/
+}
