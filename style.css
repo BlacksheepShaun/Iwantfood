@@ -1,17 +1,44 @@
 .container {
     display: flex;          /*put the items in line*/
     border: 5px solid black;        /*the border is full size*/
+    font-size: 50px;            /*font bigger*/
+    background-color: lightyellow;
+
+    justifycontent: space-evenly; /*For all items in the container*/
+    /*center
+      space-around >> put equal spaces around(both sides) the items <also space to edge>
+      space-between >> put equal spaces between items <no space to edges>
+      space-evenly >> put space evenly including edges
+      flex-end & start(default) */
     
+    justifycontent: flex-end;      /*@ push all items to the left but margin-right can push the hello to right*/
 }
 
-.one {
-    background-color: yellow;
+.container > div /* > All the direct children in the container*/
+{
+fl8x: 1;        
+/*items grow and shrink with the size of the container 
+flex:1 is more handy version of width %
+(if u have 3 item >33% and it has to change according to the number of the item)
+flex box will do all the maths for you*/
 }
 
-.two {
-    background-color: aqua;
+.container > .world /*can't do just ".world" because of the specificity*/ 
+{ /* ^if you want the specific item to grow bigger or shrink smaller than the rest item */
+    flex: 2;
 }
 
-.three {
+.hello{
+    background-color: maroon;
+    marginright: auto;             /*@^ push hello to the flex-start*/
+}
+
+.world {
+    background-color: aqua;      /*if we push the second item to left the third will also move      mgin-2*/
+    marginleft: auto;
+}
+
+.sheep {
     background-color: lightcoral;
+    marginleft: auto;          /*push the item to left         ^mgin-1*/   
 }

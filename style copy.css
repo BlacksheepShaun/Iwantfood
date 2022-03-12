@@ -1,0 +1,38 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;          
+    border: 5px solid black;       
+    font-size: 50px;            
+    text-align: center;
+    background-color: lightyellow;
+    height: 100%;               /*if you want to put the height ___% you have to put html, body to 100%*/
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+ 
+}
+
+/*make hello and sheep responsive, world fixed */
+/*remove the .container > div to remove grow and shrink from all divs
+  and add the flex value to the items that you want to make responsive*/
+
+.hello{
+    background-color: maroon;
+    fl3x: 1;                        /*<<<*/
+    alignself: flex-end;           /*align-self to target the specific item*/
+}
+
+.world {
+    background-color: aqua;      
+}
+
+.sheep {
+    background-color: lightcoral;
+    fl3x: 1;                            /*<<<*/
+    alignself: flex-start;
+}        
