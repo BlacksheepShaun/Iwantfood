@@ -1,0 +1,17 @@
+.container {
+    display: flex;          /*put the items in line*/
+    border: 5px solid black;        /*the border is full size*/
+    
+}
+
+.one {
+    background-color: yellow;
+}
+
+.two {
+    background-color: aqua;
+}
+
+.three {
+    background-color: lightcoral;
+}
